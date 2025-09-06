@@ -1,0 +1,12 @@
+.container{
+  width: 1312px;
+  margin: 0 auto;
+}
+
+.hero{
+
+
+    width: 100vw;
+    height: 900px;
+    background-image: linear-gradient(to bottom, black, #764191, black);
+}
