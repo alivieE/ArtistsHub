@@ -9,94 +9,98 @@ const Hero = () => {
   console.log(isDesktop);
   return (
     <div className={s.section}>
-      <div className={s.leftSide}>
-        <h1 className={s.description}>
-          Discover Your Next Favorite Artist Today
-        </h1>
-        <p>
-          Dive into a world of music discoveries with ArtistsHub – your personal
-          guide to the boundless universe of sound. Explore, filter, and learn
-          about your favorite artists all in one place.
-        </p>
-        <p>Explore Artists</p>
-      </div>
-      <div className={s.rightSide}>
-        <ul className="firstWrap">
-          <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob1
-                  : isDesktop
-                  ? heroImg.desk1
-                  : heroImg.tab1
-              }
-              alt="artist"
-            />
-          </li>
-          <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob2
-                  : isDesktop
-                  ? heroImg.desk2
-                  : heroImg.tab2
-              }
-              alt="artist"
-            />
-          </li>
-          <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob3
-                  : isDesktop
-                  ? heroImg.desk3
-                  : heroImg.tab3
-              }
-              alt="artist"
-            />
-          </li>
-        </ul>
-        <ul className="secondWrap">
+      <div className={s.topGradient}></div>
+      <div className={s.bottomGradient}></div>
+      <div className="container">
+        <div className={s.leftSide}>
+          <h1 className={s.mainTitle}>
+            Discover Your Next Favorite Artist Today
+          </h1>
+          <p className={s.description}>
+            Dive into a world of music discoveries with ArtistsHub – your
+            personal guide to the boundless universe of sound. Explore, filter,
+            and learn about your favorite artists all in one place.
+          </p>
+          <p>Explore Artists</p>
+        </div>
+        <div className={s.rightSide}>
+          <ul className={s.firstWrap}>
             <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob4
-                  : isDesktop
-                  ? heroImg.desk4
-                  : heroImg.tab4
-              }
-              alt="artist"
-            />
-          </li>
-          <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob5
-                  : isDesktop
-                  ? heroImg.desk5
-                  : heroImg.tab5
-              }
-              alt="artist"
-            />
-          </li>
-          <li>
-            <img
-              src={
-                isMobile
-                  ? heroImg.mob6
-                  : isDesktop
-                  ? heroImg.desk6
-                  : heroImg.tab6
-              }
-              alt="artist"
-            />
-          </li>
-        </ul>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob1
+                    : isDesktop
+                    ? heroImg.desk1
+                    : heroImg.tab1
+                }
+                alt="artist"
+              />
+            </li>
+            <li>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob2
+                    : isDesktop
+                    ? heroImg.desk2
+                    : heroImg.tab2
+                }
+                alt="artist"
+              />
+            </li>
+            <li>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob3
+                    : isDesktop
+                    ? heroImg.desk3
+                    : heroImg.tab3
+                }
+                alt="artist"
+              />
+            </li>
+          </ul>
+          <ul className={s.secondWrap}>
+            <li>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob4
+                    : isDesktop
+                    ? heroImg.desk4
+                    : heroImg.tab4
+                }
+                alt="artist"
+              />
+            </li>
+            <li>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob5
+                    : isDesktop
+                    ? heroImg.desk5
+                    : heroImg.tab5
+                }
+                alt="artist"
+              />
+            </li>
+            <li>
+              <img
+                src={
+                  isMobile
+                    ? heroImg.mob6
+                    : isDesktop
+                    ? heroImg.desk6
+                    : heroImg.desk6
+                }
+                alt="artist"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

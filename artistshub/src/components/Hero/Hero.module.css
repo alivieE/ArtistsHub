@@ -1,21 +1,41 @@
 .section {
   color: white;
-  background-color: #764191;
+  background-color: #23132b;
+  position: relative;
 }
 
-.description {
-  font-size: 64px;
+.mainTitle {
+  font-size: 48px;
   font-weight: 700;
-  line-height: 76px;
+  line-height: 53px;
+  margin-bottom: 20px;
 }
-.firstWrap {
+.description {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.firstWrap,
+.secondWrap {
   display: flex;
   flex-direction: column;
   background-color: transparent;
+  gap: 16px;
 }
 
-.rightSide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.rightSide {
+  display: flex;
+  gap: 16px;
+}
+.topGradient {
+  background: linear-gradient(180deg, #060307 0%, rgba(35, 19, 43, 0) 100%);
+  height: 80px;
+  width: 100%;
+}
+.bottomGradient {
+  background: linear-gradient(180deg, rgba(35, 19, 43, 0) 0%, #060307 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
 }
