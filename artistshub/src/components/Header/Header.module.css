@@ -3,16 +3,120 @@
     align-items: center;
     gap: 5px;
     color: white;
+    z-index: 3;
 }
 
 .nav{
     display: flex;
     align-items: center;
-    gap: 20px;
+    width: 100vw;
     color: white;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
+    margin: 11px 0;
+    background-color: #060307;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
+
+.menu {
+  position: fixed;
+
+  right: 30px;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burgerCheckbox {
+  position: absolute;
+  visibility: hidden;
+}
+.burger {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 26px;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: white;
+}
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 white;
+  transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+}
+.burger::after {
+  bottom: 0;
+  transition: bottom 0.3s 0.15s, transform 0.3s;
+}
+.burgerCheckbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+}
+.burgerCheckbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom 0.3s, transform 0.3s 0.15s;
+}
+.overlay {
+  top: -20px;
+  left: 70px;
+  position: absolute;
+  background: #060307;
+  padding-top: 80px;
+  transition: 0.3s;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.open {
+  transform: translateX(-100%);
+}
+
+.menuList{
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    margin: 105px 105px 105px 122px;
+
+}
+
+.menuItem {
+  display: block;
+  padding: px;
+  color: white;
+  font-size: 18px;
+  text-align: right;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.burgerCheckbox:checked ~ .menu-list {
+  transform: translateX(0);
+}
+
