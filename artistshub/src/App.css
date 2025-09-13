@@ -1,12 +1,22 @@
-.container{
-  width: 1312px;
+.container {
+  width: 288px;
   margin: 0 auto;
 }
 
-.hero{
+.hero {
+  width: 100vw;
+  height: 900px;
+  background-image: linear-gradient(to bottom, black, #764191, black);
+}
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 704px;
+  }
+}
 
-    width: 100vw;
-    height: 900px;
-    background-image: linear-gradient(to bottom, black, #764191, black);
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1312px;
+  }
 }
