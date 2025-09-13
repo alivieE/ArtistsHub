@@ -1,6 +1,5 @@
 .section {
   color: white;
-
   background-color: #764191;
 }
 
@@ -12,4 +11,10 @@
 .firstWrap {
   display: flex;
   flex-direction: column;
+}
+
+.rightSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -35,13 +35,68 @@ const Hero = () => {
             />
           </li>
           <li>
-            <img src={images.people_two} alt="artist" />
+            <img
+              src={
+                isMobile
+                  ? heroImg.mob2
+                  : isDesktop
+                  ? heroImg.desk2
+                  : heroImg.tab2
+              }
+              alt="artist"
+            />
           </li>
           <li>
-            <img src={images.people_three} alt="artist" />
+            <img
+              src={
+                isMobile
+                  ? heroImg.mob3
+                  : isDesktop
+                  ? heroImg.desk3
+                  : heroImg.tab3
+              }
+              alt="artist"
+            />
           </li>
         </ul>
-        <ul className="secondWrap"></ul>
+        <ul className="secondWrap">
+            <li>
+            <img
+              src={
+                isMobile
+                  ? heroImg.mob4
+                  : isDesktop
+                  ? heroImg.desk4
+                  : heroImg.tab4
+              }
+              alt="artist"
+            />
+          </li>
+          <li>
+            <img
+              src={
+                isMobile
+                  ? heroImg.mob5
+                  : isDesktop
+                  ? heroImg.desk5
+                  : heroImg.tab5
+              }
+              alt="artist"
+            />
+          </li>
+          <li>
+            <img
+              src={
+                isMobile
+                  ? heroImg.mob6
+                  : isDesktop
+                  ? heroImg.desk6
+                  : heroImg.tab6
+              }
+              alt="artist"
+            />
+          </li>
+        </ul>
       </div>
     </div>
   );
