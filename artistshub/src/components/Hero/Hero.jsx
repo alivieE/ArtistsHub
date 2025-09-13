@@ -21,7 +21,9 @@ const Hero = () => {
             personal guide to the boundless universe of sound. Explore, filter,
             and learn about your favorite artists all in one place.
           </p>
-          <p>Explore Artists</p>
+          <button>Explore Artists 
+            <img src={heroImg.icon} alt="icon"/> 
+          </button>
         </div>
         <div className={s.rightSide}>
           <ul className={s.firstWrap}>

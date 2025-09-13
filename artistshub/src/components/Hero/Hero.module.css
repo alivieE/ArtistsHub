@@ -39,3 +39,8 @@
   height: 80px;
   width: 100%;
 }
+
+.button{
+  background: none;
+  cursor: progress;
+}

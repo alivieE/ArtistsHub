@@ -15,6 +15,7 @@ import mob3 from "./mob3.jpg";
 import mob4 from "./mob4.jpg";
 import mob5 from "./mob5.jpg";
 import mob6 from "./mob6.png";
+import icon from "./icon.svg";
 
 export default {
   desk1,
@@ -34,4 +35,5 @@ export default {
   tab3,
   tab4,
   tab5,
+  icon,
 };
