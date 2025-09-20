@@ -9,6 +9,7 @@
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   color: white;
 }
@@ -118,4 +119,18 @@
 
 body:has(.burgerCheckbox:checked) {
   overflow: hidden;
+}
+
+.bigMenu {
+  color: white;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .bigMenu {
+    display: block;
+  }
 }
