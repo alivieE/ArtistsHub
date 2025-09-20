@@ -21,14 +21,16 @@ const Hero = () => {
             personal guide to the boundless universe of sound. Explore, filter,
             and learn about your favorite artists all in one place.
           </p>
-          <button className={s.button} type="button">Explore Artists 
-            <img src={heroImg.icon} alt="icon"/> 
+          <button className={s.button} type="button">
+            Explore Artists
+            <img src={heroImg.icon} alt="icon" />
           </button>
         </div>
         <div className={s.rightSide}>
           <ul className={s.firstWrap}>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob1
@@ -41,6 +43,7 @@ const Hero = () => {
             </li>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob2
@@ -53,6 +56,7 @@ const Hero = () => {
             </li>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob3
@@ -67,6 +71,7 @@ const Hero = () => {
           <ul className={s.secondWrap}>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob4
@@ -79,6 +84,7 @@ const Hero = () => {
             </li>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob5
@@ -91,6 +97,7 @@ const Hero = () => {
             </li>
             <li>
               <img
+                className={s.img}
                 src={
                   isMobile
                     ? heroImg.mob6

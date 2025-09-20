@@ -2,7 +2,6 @@
   color: white;
   background-color: #23132b;
   position: relative;
-
 }
 
 .mainTitle {
@@ -41,18 +40,21 @@
   width: 100%;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: #7A4794;
+  background-color: #7a4794;
   cursor: progress;
   border-radius: 12px;
   width: 100%;
   padding: 10px 24px;
   gap: 12px;
   margin: 32px 0 64px 0;
-  border-top: 2px solid #9973AD;
-  border-bottom: 2px solid #5F3575;
+  border-top: 2px solid #9973ad;
+  border-bottom: 2px solid #5f3575;
+}
+.img {
+  border-radius: 16px;
 }
