@@ -95,19 +95,21 @@ const Hero = () => {
                 alt="artist"
               />
             </li>
-            <li>
-              <img
-                className={s.img}
-                src={
-                  isMobile
-                    ? heroImg.mob6
-                    : isDesktop
-                    ? heroImg.desk6
-                    : heroImg.desk6
-                }
-                alt="artist"
-              />
-            </li>
+            {(isDesktop || isMobile) && (
+              <li className={s.lastImg}>
+                <img
+                  className={s.img}
+                  src={
+                    isMobile
+                      ? heroImg.mob6
+                      : isDesktop
+                      ? heroImg.desk6
+                      : heroImg.desk6
+                  }
+                  alt="artist"
+                />
+              </li>
+            )}
           </ul>
         </div>
       </div>
