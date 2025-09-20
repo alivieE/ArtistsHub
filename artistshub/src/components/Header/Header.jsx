@@ -14,9 +14,15 @@ const Header = () => {
 
         <div className={s.bigMenu}>
           <nav>
-            <ul>
+            <ul className={s.bigMenuList}>
               <li>
-                <a href="#"> artists</a>
+                <a href="#"> Artists</a>
+              </li>
+              <li>
+                <a href="#"> About Us</a>
+              </li>
+              <li>
+                <a href="#"> Reviews</a>
               </li>
             </ul>
           </nav>

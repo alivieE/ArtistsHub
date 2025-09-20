@@ -126,6 +126,12 @@ body:has(.burgerCheckbox:checked) {
   display: none;
 }
 
+.bigMenuList{
+  display: flex;
+  gap: 32px;
+  
+}
+
 @media screen and (min-width: 768px) {
   .menu {
     display: none;
