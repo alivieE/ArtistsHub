@@ -168,3 +168,7 @@ input::-webkit-inner-spin-button {
 input {
   outline: none;
 }
+.root {
+  overflow: hidden;
+  position: relative;
+}
