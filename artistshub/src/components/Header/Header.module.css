@@ -20,7 +20,7 @@
   margin: 11px 0;
   background-color: #060307;
   width: 100%;
-
+  padding: 0 10px;
   z-index: 1;
 }
 
@@ -126,10 +126,9 @@ body:has(.burgerCheckbox:checked) {
   display: none;
 }
 
-.bigMenuList{
+.bigMenuList {
   display: flex;
   gap: 32px;
-  
 }
 
 @media screen and (min-width: 768px) {
