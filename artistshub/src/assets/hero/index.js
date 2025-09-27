@@ -9,11 +9,11 @@ import tab2 from "./tab2.jpg";
 import tab3 from "./tab3.jpg";
 import tab4 from "./tab4.png";
 import tab5 from "./tab5.png";
-import mob1 from "./mob1.jpg";
-import mob2 from "./mob2.jpg";
-import mob3 from "./mob3.jpg";
-import mob4 from "./mob4.jpg";
-import mob5 from "./mob5.jpg";
+import mob1 from "./mob1.png";
+import mob2 from "./mob2.png";
+import mob3 from "./mob3.png";
+import mob4 from "./mob4.png";
+import mob5 from "./mob5.png";
 import mob6 from "./mob6.png";
 import icon from "./icon.svg";
 
