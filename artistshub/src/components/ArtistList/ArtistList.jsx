@@ -7,17 +7,18 @@ const ArtistList = () => {
   const [artists, setArtists] = useState([]);
   const [page, setPage] = useState(1);
   const [modalOpen, setModalOpen] = useState(false);
-
+  const [id, setId] = useState(false);
   useEffect(() => {
-      fetch(`https://sound-wave.b.goit.study/api/artists?limit=10&page=${page}`)
-        .then((res) => {
-          return res.json();
+    fetch(`https://sound-wave.b.goit.study/api/artists?limit=10&page=${page}`)
+      .then((res) => {
+        return res.json();
       })
       .then((data) => {
         setArtists((prev) => {
           return [...prev, ...data.artists];
         });
-      });}, [page]);
+      });
+  }, [page]);
   return (
     <div className={s.section}>
       <div className="container">
@@ -38,18 +39,30 @@ const ArtistList = () => {
                   <p className={s.artistsDescription}>
                     {artist.strBiographyEN}
                   </p>
-                  <button className={s.learnMore} onClick={()=>{
-                    setModalOpen(!modalOpen)}}> 
-                      Learn More <img src={images.caret_right}/>
+                  <button
+                    className={s.learnMore}
+                    onClick={() => {
+                      console.log(artist);
+                      setId(artist._id);
+                      setModalOpen(!modalOpen);
+                    }}
+                  >
+                    Learn More <img src={images.caret_right} />
                   </button>
                 </li>
               );
             })}
         </ul>
-        <button className={s.loadMore} onClick={()=>{
-        setPage(page + 1)}}>Load More <img src={images.down_arrow_alt}/></button>
+        <button
+          className={s.loadMore}
+          onClick={() => {
+            setPage(page + 1);
+          }}
+        >
+          Load More <img src={images.down_arrow_alt} />
+        </button>
       </div>
-      {modalOpen && <ModalArtist setArtists={id}></ModalArtist>}
+      {modalOpen && <ModalArtist id={id}></ModalArtist>}
     </div>
   );
 };
