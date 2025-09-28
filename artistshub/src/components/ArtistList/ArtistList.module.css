@@ -15,8 +15,68 @@
 }
 
 .artistsDescription {
+  margin: 16px 0;
+  font-weight: 400;
+  font-size: 18px;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* скільки рядків залишити */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.strImg{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.genresList{
+  display: flex;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+.genre{
+  border: 1px solid #383539;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.artistsName{
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+.ArtistList{
+  margin-top: 32px;
+}
+
+.learnMore{
+  display: flex;
+  align-items: flex-start;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: white;
+}
+
+.loadMore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #7a4794;
+  cursor: progress;
+  border-radius: 12px;
+  width: 100%;
+  padding: 10px 24px;
+  gap: 12px;
+  margin: 32px 0 64px 0;
+  border-top: 2px solid #9973ad;
+  border-bottom: 2px solid #5f3575;
 }

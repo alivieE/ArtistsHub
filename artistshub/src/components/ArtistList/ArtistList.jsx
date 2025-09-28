@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./ArtistList.module.css";
+import images from "../../assets/hero/index";
 
 const ArtistList = () => {
   const [artists, setArtists] = useState([]);
@@ -22,8 +23,8 @@ const ArtistList = () => {
           {artists.length > 0 &&
             artists.map((artist) => {
               return (
-                <li>
-                  <img src={artist.strArtistThumb}></img>
+                <li className={s.ArtistList}>
+                  <img src={artist.strArtistThumb} className={s.strImg}></img>
                   <ul className={s.genresList}>
                     {artist.genres.map((genre) => {
                       return <li className={s.genre}>{genre}</li>;
@@ -33,10 +34,12 @@ const ArtistList = () => {
                   <p className={s.artistsDescription}>
                     {artist.strBiographyEN}
                   </p>
+                  <button className={s.learnMore}> Learn More <img src={images.caret_right}/></button>
                 </li>
               );
             })}
         </ul>
+        <button className={s.loadMore}>Load More <img src={images.down_arrow_alt}/></button>
       </div>
     </div>
   );

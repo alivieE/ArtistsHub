@@ -16,6 +16,8 @@ import mob4 from "./mob4.png";
 import mob5 from "./mob5.png";
 import mob6 from "./mob6.png";
 import icon from "./icon.svg";
+import caret_right from "./caret_right.svg";
+import down_arrow_alt from "./down_arrow_alt.svg"
 
 export default {
   desk1,
@@ -36,6 +38,8 @@ export default {
   tab4,
   tab5,
   icon,
+  caret_right,
+  down_arrow_alt,
 };
 
 
