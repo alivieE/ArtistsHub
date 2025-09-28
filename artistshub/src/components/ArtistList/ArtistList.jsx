@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 import s from "./ArtistList.module.css";
 import images from "../../assets/hero/index";
+import ModalArtist from "./ModalArtist/ModalArtist";
 
 const ArtistList = () => {
   const [artists, setArtists] = useState([]);
+  const [page, setPage] = useState(1);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    fetch("https://sound-wave.b.goit.study/api/artists?limit=10&page=1")
-      .then((res) => {
-        return res.json();
+      fetch(`https://sound-wave.b.goit.study/api/artists?limit=10&page=${page}`)
+        .then((res) => {
+          return res.json();
       })
       .then((data) => {
-        setArtists(data.artists);
-      });
-  }, []);
+        setArtists((prev) => {
+          return [...prev, ...data.artists];
+        });
+      });}, [page]);
   return (
     <div className={s.section}>
       <div className="container">
@@ -34,13 +38,18 @@ const ArtistList = () => {
                   <p className={s.artistsDescription}>
                     {artist.strBiographyEN}
                   </p>
-                  <button className={s.learnMore}> Learn More <img src={images.caret_right}/></button>
+                  <button className={s.learnMore} onClick={()=>{
+                    setModalOpen(!modalOpen)}}> 
+                      Learn More <img src={images.caret_right}/>
+                  </button>
                 </li>
               );
             })}
         </ul>
-        <button className={s.loadMore}>Load More <img src={images.down_arrow_alt}/></button>
+        <button className={s.loadMore} onClick={()=>{
+        setPage(page + 1)}}>Load More <img src={images.down_arrow_alt}/></button>
       </div>
+      {modalOpen && <ModalArtist setArtists={id}></ModalArtist>}
     </div>
   );
 };
