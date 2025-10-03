@@ -5,5 +5,35 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: red;
+    background-color: black;
+    color: white;
+}
+
+.section{
+    padding: 8px;
+    
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.strImg{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.biography{
+    margin: 16px 0;
+  font-weight: 400;
+  font-size: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* скільки рядків залишити */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
