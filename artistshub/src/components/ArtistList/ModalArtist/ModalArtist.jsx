@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import s from "./ModalArtist.module.css";
+import images from "../../../assets/index";
 
-const ModalArtist = ({ id }) => {
+const ModalArtist = ({ id, setModalOpen }) => {
   const [artist, setArtist] = useState(null);
   console.log(artist);
 
@@ -16,38 +17,42 @@ const ModalArtist = ({ id }) => {
   }, [id]);
 
   return (
-    <div className={s.overlay}>
+    <>
+    <div className={s.overlay} onClick={() => { setModalOpen(false)}}>
       {artist && (
         <div className={s.section}>
           <p className={s.name}>{artist.strArtist}</p>
           <img src={artist.strArtistThumb} className={s.strImg}></img>
-          <div>
-            <p>Years active</p>
+          <div className={s.part}>
+            <p className={s.modalSubtitle}>Years active</p>
             <p className={s.intFormedYear}>{artist.intFormedYear}</p>
           </div>
-          <div>
-            <p>Sex</p>
+          <div className={s.part}>
+            <p className={s.modalSubtitle}>Sex</p>
             <p className={s.strGender}>{artist.strGender}</p>
           </div>
-          <div>
-            <p>Country</p>
-            <p className={s.members}></p>
+          <div  className={s.part}>
+            <p className={s.modalSubtitle}>Country</p>
+            <p className={s.members}>{artist.strLabel}</p>
           </div>
-          <div>
-            <p>Biography</p>
-            <p className={s.strLabel}>{artist.strLabel}</p>
+          <div  className={s.part}>
+            <p className={s.modalSubtitle}>Biography</p>
+            <p className={s.strLabel}>{artist.strBiographyEN}</p>
           </div>
-          <div>
-            <p>Years active</p>
-            <p className={s.biography}>{artist.strBiographyEN}</p>
-          </div>
-          {artist.genres.map((genre) => {
-            return <li className={s.genre}>{genre}</li>;
-          })}
+          
+          <ul className={s.genresList}>
+             {artist.genres.map((genre) => {
+               return <li className={s.genre}>{genre}</li>;
+             })}
+          </ul>
           <div></div>
         </div>
       )}
+      <button className={s.close} onClick={() => { setModalOpen(false)}}>
+        <img src={images.close}/>
+      </button>
     </div>
+    </>
   );
 };
 

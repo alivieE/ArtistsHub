@@ -62,7 +62,7 @@ const ArtistList = () => {
           Load More <img src={images.down_arrow_alt} />
         </button>
       </div>
-      {modalOpen && <ModalArtist id={id}></ModalArtist>}
+      {modalOpen && <ModalArtist id={id} setModalOpen={setModalOpen}></ModalArtist>}
     </div>
   );
 };

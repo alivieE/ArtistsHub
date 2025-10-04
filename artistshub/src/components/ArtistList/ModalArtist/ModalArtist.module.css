@@ -1,17 +1,21 @@
 .overlay {
+  padding: 64px 16px;
   width: 100vw;
   height: 100vh;
   position: fixed;
   z-index: 1000;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #303030ec;
   color: white;
   overflow: scroll;
 }
 
 .section {
+  background-color: black;
+  border-radius: 16px;
   padding: 8px;
+  position: relative;
 }
 
 .name {
@@ -28,6 +32,16 @@
   border-radius: 16px;
 }
 
+.part{
+  margin-top: 16px;
+}
+
+.modalSubtitle{
+  font-weight: 600;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
 .biography {
   margin: 16px 0;
 
@@ -37,4 +51,25 @@
   -webkit-line-clamp: 2; скільки рядків залишити 
   -webkit-box-orient: vertical;
   overflow: hidden; */
+}
+
+.genresList{
+  display: flex;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+.genre{
+  border: 1px solid #383539;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.close{
+  position: absolute;
+  top:25px;
+  right: 25px;
+  background-color: transparent;
 }

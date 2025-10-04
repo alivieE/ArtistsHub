@@ -5,6 +5,6 @@ import people_three from './people_three.webp';
 import people_four from './people_four.webp';
 import people_five from './people_five.webp';
 import people_six from './people_six.webp';
+import close from './close.svg';
 
-
-export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six}
+export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six, close}
