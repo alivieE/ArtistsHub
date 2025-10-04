@@ -4,6 +4,7 @@ import images from "../../../assets/index";
 
 const ModalArtist = ({ id, setModalOpen }) => {
   const [artist, setArtist] = useState(null);
+  const [albums, setAlbums] = useState(null);
   console.log(artist);
 
   useEffect(() => {
@@ -15,6 +16,17 @@ const ModalArtist = ({ id, setModalOpen }) => {
         setArtist(data);
       });
   }, [id]);
+
+  useEffect(() => {
+    fetch(`https://sound-wave.b.goit.study/api/artists/${id}/alumbs`, {})
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setAlbums(data);
+      });
+  }, [id]);
+console.log(albums);
 
   return (
     <>
@@ -63,6 +75,14 @@ const ModalArtist = ({ id, setModalOpen }) => {
         >
           <img src={images.close} />
         </button>
+        <div>
+          <p>Albums</p>
+          <ul>
+            {/* {albums.tracklist.map((album) => {
+              return <li>{album.strAlbum}</li>;
+            })} */}
+            </ul>
+        </div>
       </div>
     </>
   );
