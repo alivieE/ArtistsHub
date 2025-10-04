@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import s from "./ModalArtist.module.css";
 
 const ModalArtist = ({ id }) => {
-  const [artist, setArtist] = useState(null);
+  console.log(id);
 
   useEffect(() => {
     fetch(`https://sound-wave.b.goit.study/api/artists/${id}`, {})
@@ -16,27 +16,31 @@ const ModalArtist = ({ id }) => {
 
   return (
     <div className={s.overlay}>
-      {artist && (
+      {id && (
         <div className={s.section}>
-          <p className={s.name}>{artist.strArtist}</p>
-          <img src={artist.strArtistThumb} className={s.strImg} />
+          <p className={s.name}>{id.strArtist}</p>
+          <img src={id.strArtistThumb} className={s.strImg}></img>
           <div>
-            <p className={s.intFormedYear}>{artist.intFormedYear}</p>
+            <p>Years active</p>
+            <p className={s.intFormedYear}>{id.intFormedYear}</p>
           </div>
           <div>
-                  <p className={s.strGender}>{artist.strGender}</p>
+            <p>Sex</p>
+            <p className={s.strGender}>{id.strGender}</p>
           </div>
           <div>
+            <p>Country</p>
             <p className={s.members}></p>
           </div>
           <div>
-            <p className={s.strLabel}>{artist.strLabel}</p>
+            <p>Biography</p>
+            <p className={s.strLabel}>{id.strLabel}</p>
           </div>
           <div>
-            <p className={s.biography}>{artist.strBiographyEN}</p>
+            <p>Years active</p>
+            <p className={s.biography}>{id.strBiographyEN}</p>
           </div>
-
-          {artist.genres.map((genre) => {
+          {id.genres.map((genre) => {
             return <li className={s.genre}>{genre}</li>;
           })}
           <div></div>
