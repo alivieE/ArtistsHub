@@ -28,6 +28,7 @@ const ModalArtist = ({ id, setModalOpen }) => {
   }, [id]);
 console.log(albums);
 
+
   return (
     <>
       <div
@@ -80,7 +81,20 @@ console.log(albums);
                       </div>                      
                     </div>
                       <ul  className={s.tracks}>{album.tracks.map((track) => {
-                        return  <li className={s.track}>{track.strTrack}</li>
+                          const videoDuration = track.intDuration;
+                          const time = Math.floor(videoDuration / 1000);
+                          const formatted = `${Math.floor(time / 60)}:${(time % 60).toString().padStart(2, "0")}`;
+                        return  <div className={s.track}>
+                                  <li className={s.trackName}>{track.strTrack}</li>
+                                  <div className={s.trackTL}>
+                                    <li className={s.trackTime}>{formatted}</li>
+                                    <li className={s.trackLink}>
+                                      <div className={s.videoLink}>
+                                      <a href={track.movie} target="_blank" >{track.movie && <img src={images.video} />}</a>                                      
+                                      </div>
+                                    </li>
+                                  </div>
+                                </div>
                         })}
                       </ul>
                   </li>
