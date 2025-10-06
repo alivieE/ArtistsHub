@@ -18,12 +18,12 @@ const ModalArtist = ({ id, setModalOpen }) => {
   }, [id]);
 
   useEffect(() => {
-    fetch(`https://sound-wave.b.goit.study/api/artists/${id}/alumbs`, {})
+    fetch(`https://sound-wave.b.goit.study/api/artists/${id}/albums`, {})
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        setAlbums(data);
+        setAlbums(data.albumsList);
       });
   }, [id]);
 console.log(albums);
@@ -64,7 +64,29 @@ console.log(albums);
                 return <li className={s.genre}>{genre}</li>;
               })}
             </ul>
-            <div></div>
+            <div className={s.albumsList}>
+              <p className={s.albums}>Albums</p>
+              <ul className={s.albumsList}>
+                {albums && albums.map((album) => {
+                  return <li className={s.album}>
+                    <p className={s.albumTitle}>{album.strAlbum}</p>
+                    <div className={s.info}>
+                      <div className={s.infoWrapOne}>
+                        <p className={s.infotext}>Track</p>
+                      </div>
+                      <div className={s.infoWrapTwo}>
+                        <p className={s.infotext}>Time</p>
+                        <p className={s.infotext}>Link</p>
+                      </div>                      
+                    </div>
+                      <ul  className={s.tracks}>{album.tracks.map((track) => {
+                        return  <li className={s.track}>{track.strTrack}</li>
+                        })}
+                      </ul>
+                  </li>
+                })}
+              </ul>
+        </div>
           </div>
         )}
         <button
@@ -75,14 +97,7 @@ console.log(albums);
         >
           <img src={images.close} />
         </button>
-        <div>
-          <p>Albums</p>
-          <ul>
-            {/* {albums.tracklist.map((album) => {
-              return <li>{album.strAlbum}</li>;
-            })} */}
-            </ul>
-        </div>
+        
       </div>
     </>
   );
