@@ -7,5 +7,7 @@ import people_five from './people_five.webp';
 import people_six from './people_six.webp';
 import close from './close.svg';
 import video from './video.svg';
+import aboutUs from './aboutUs.webp'
+import aboutUs_logo from './aboutUs_logo.svg'
 
-export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six, close, video}
+export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six, close, video, aboutUs, aboutUs_logo}

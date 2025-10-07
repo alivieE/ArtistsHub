@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutUs from "./components/AboutUs/AboutUs";
 import ArtistList from "./components/ArtistList/ArtistList";
 import FeedBacks from "./components/FeedBacks/FeedBacks";
 import Header from "./components/Header/Header";
@@ -9,8 +10,15 @@ function App() {
     <>
       <Header></Header>
       <Hero className="hero"></Hero>
-      <ArtistList />
-      <FeedBacks/>
+      <section id="artists">
+        <ArtistList />
+      </section>
+      <section id="about">
+        <AboutUs />
+      </section>
+      <section id="reviews">
+        <FeedBacks />
+      </section>
     </>
   );
 }

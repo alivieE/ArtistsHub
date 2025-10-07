@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import s from "./Header.module.css";
 import images from "../../assets";
+import ArtistsList from '../ArtistList/ArtistList'
+import AboutUs from '../AboutUs/AboutUs'
 
 const Header = () => {
-  const [isOpenMenu, setisOpenMenu] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   return (
     <div className="container">
       <div className={s.header}>
@@ -16,13 +18,13 @@ const Header = () => {
           <nav>
             <ul className={s.bigMenuList}>
               <li>
-                <a href="#"> Artists</a>
+                <a href="#artists"> Artists</a>
               </li>
               <li>
-                <a href="#"> About Us</a>
+                <a href="#about"> About Us</a>
               </li>
               <li>
-                <a href="#"> Reviews</a>
+                <a href="#reviews"> Reviews</a>
               </li>
             </ul>
           </nav>
@@ -31,7 +33,7 @@ const Header = () => {
         <div className={s.menu}>
           <input
             onClick={() => {
-              setisOpenMenu(!isOpenMenu);
+              setIsOpenMenu(!isOpenMenu);
             }}
             type="checkbox"
             id="burgerCheckbox"
@@ -47,30 +49,30 @@ const Header = () => {
                 <li
                   class={s.menuItem}
                   onClick={() => {
-                    setisOpenMenu(!isOpenMenu);
+                    setIsOpenMenu(!isOpenMenu);
                   }}
                 >
-                  <a href="#" className={s.menu_item}>
+                  <a href="#artists" className={s.menu_item}>
                     Artists
                   </a>
                 </li>
                 <li
                   class={s.menuItem}
                   onClick={() => {
-                    setisOpenMenu(!isOpenMenu);
+                    setIsOpenMenu(!isOpenMenu);
                   }}
                 >
-                  <a href="#" className={s.menu_item}>
+                  <a href="#about" className={s.menu_item}>
                     About Us
                   </a>
                 </li>
                 <li
                   class={s.menuItem}
                   onClick={() => {
-                    setisOpenMenu(!isOpenMenu);
+                    setIsOpenMenu(!isOpenMenu);
                   }}
                 >
-                  <a href="#" className={s.menu_item}>
+                  <a href="#reviews" className={s.menu_item}>
                     Reviews
                   </a>
                 </li>

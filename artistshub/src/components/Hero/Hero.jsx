@@ -22,8 +22,9 @@ const Hero = () => {
             and learn about your favorite artists all in one place.
           </p>
           <button className={s.button} type="button">
-            Explore Artists
-            <img src={heroImg.icon} alt="icon" />
+              <a href="#artists" className={s.buttonItem}> Explore Artists 
+                <img src={heroImg.icon} alt="icon" />
+              </a> 
           </button>
         </div>
         <div className={s.rightSide}>
