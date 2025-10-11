@@ -28,7 +28,11 @@ const StarRating = ({ value, isChange }) => {
           <FaStar
             key={index}
             size={24}
-            color={(hoverValue || rating) >= currentValue ? "gold" : "gray"}
+            color={
+              (hoverValue || rating) >= currentValue
+                ? "rgba(118, 65, 145, 1)"
+                : "rgba(255, 255, 255, 1)"
+            }
             onClick={() => {
               if (isChange) {
                 handleClick(currentValue);
