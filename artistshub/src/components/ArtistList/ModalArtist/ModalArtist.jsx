@@ -26,8 +26,7 @@ const ModalArtist = ({ id, setModalOpen }) => {
         setAlbums(data.albumsList);
       });
   }, [id]);
-console.log(albums);
-
+  console.log(albums);
 
   return (
     <>
@@ -68,39 +67,62 @@ console.log(albums);
             <div className={s.albumsList}>
               <p className={s.albums}>Albums</p>
               <ul className={s.albumsList}>
-                {albums && albums.map((album) => {
-                  return <li className={s.album}>
-                    <p className={s.albumTitle}>{album.strAlbum}</p>
-                    <div className={s.info}>
-                      <div className={s.infoWrapOne}>
-                        <p className={s.infotext}>Track</p>
-                      </div>
-                      <div className={s.infoWrapTwo}>
-                        <p className={s.infotext}>Time</p>
-                        <p className={s.infotext}>Link</p>
-                      </div>                      
-                    </div>
-                      <ul  className={s.tracks}>{album.tracks.map((track) => {
-                          const videoDuration = track.intDuration;
-                          const time = Math.floor(videoDuration / 1000);
-                          const formatted = `${Math.floor(time / 60)}:${(time % 60).toString().padStart(2, "0")}`;
-                        return  <div className={s.track}>
-                                  <li className={s.trackName}>{track.strTrack}</li>
-                                  <div className={s.trackTL}>
-                                    <li className={s.trackTime}>{formatted}</li>
-                                    <li className={s.trackLink}>
-                                      <div className={s.videoLink}>
-                                      <a href={track.movie} target="_blank" >{track.movie && <img src={images.video} />}</a>                                      
-                                      </div>
-                                    </li>
-                                  </div>
+                {albums &&
+                  albums.map((album) => {
+                    return (
+                      <li className={s.album}>
+                        <p className={s.albumTitle}>{album.strAlbum}</p>
+                        <div className={s.info}>
+                          <div className={s.infoWrapOne}>
+                            <p className={s.infotext}>Track</p>
+                          </div>
+                          <div className={s.infoWrapTwo}>
+                            <p className={s.infotext}>Time</p>
+                            <p className={s.infotext}>Link</p>
+                          </div>
+                        </div>
+                        <ul className={s.tracks}>
+                          {album.tracks.map((track) => {
+                            const videoDuration = track.intDuration;
+                            const time = Math.floor(videoDuration / 1000);
+                            const formatted = `${Math.floor(time / 60)}:${(
+                              time % 60
+                            )
+                              .toString()
+                              .padStart(2, "0")}`;
+                            return (
+                              <div className={s.track}>
+                                <li className={s.trackName}>
+                                  {track.strTrack}
+                                </li>
+                                <div className={s.trackTL}>
+                                  <li className={s.trackTime}>{formatted}</li>
+                                  <li className={s.trackLink}>
+                                    <div className={s.videoLink}>
+                                      <a
+                                        rel="noreferrer noopener nofollow"
+                                        href={
+                                          track.movie ||
+                                          `https://www.youtube.com/results?search_query=${
+                                            artist.strArtist + track.strTrack
+                                          }`
+                                        }
+                                        target="_blank"
+                                      >
+                                        {<img src={images.video} />}
+                                      </a>
+                                    </div>
+                                  </li>
                                 </div>
-                        })}
-                      </ul>
-                  </li>
-                })}
+                              </div>
+                            );
+                          })}
+                        </ul>
+                      </li>
+                    );
+                  })}
               </ul>
-        </div>
+            </div>
           </div>
         )}
         <button
@@ -111,7 +133,6 @@ console.log(albums);
         >
           <img src={images.close} />
         </button>
-        
       </div>
     </>
   );
