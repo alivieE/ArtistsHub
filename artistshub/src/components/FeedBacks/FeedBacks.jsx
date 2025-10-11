@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./FeedBacks.module.css";
+import Rating from "./Rating";
 
 const FeedBacks = () => {
     const [feedbacks, setFeedbacks] = useState([]);
@@ -21,7 +22,7 @@ const FeedBacks = () => {
                 feedbacks.map((feedback) => {
                   return (
                     <li>
-                      <p className={s.rating}>{feedback.rating}</p>
+                      <Rating value={feedback.rating.toFixed(0)}></Rating>
                       <p className={s.description}>{feedback.descr}</p>                      
                       <p className={s.name}>{feedback.name}</p>
                     </li>
