@@ -172,3 +172,12 @@ input {
   overflow: hidden;
   position: relative;
 }
+.swiper-pagination-bullet.swiper-pagination-bullet {
+  background: white;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  background: rgba(118, 65, 145, 1);
+}
+.swiper-pagination-bullets.swiper-pagination-bullets.swiper-pagination-bullets.swiper-pagination-bullets {
+  bottom: 10px;
+}
