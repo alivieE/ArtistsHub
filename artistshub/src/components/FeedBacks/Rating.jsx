@@ -52,7 +52,6 @@ const StarRating = ({ value, isChange }) => {
           />
         );
       })}
-      <p>Your rating: {rating}</p>
     </div>
   );
 };

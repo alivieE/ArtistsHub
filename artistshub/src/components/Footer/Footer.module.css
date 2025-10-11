@@ -1,0 +1,72 @@
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  z-index: 3;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  color: white;
+}
+
+.footer {
+  display: flex;
+    justify-content: space-between;
+    margin: 11px 0;
+    background-color: #060307;
+    width: 100%;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 48px;
+    color: white;
+}
+
+.SubtractFooterText{
+    color: #764191;
+}
+
+.bigMenu{
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    color: white;
+}
+
+.bigMenuList{
+    display: flex
+;
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.link{
+    color: white;
+}
+
+.footerDesc{
+  border-top: 2px solid #1F1C20;
+  display: flex;
+  gap: 32px;
+  padding-top: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mediaLinks{
+
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}

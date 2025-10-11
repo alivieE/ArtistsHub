@@ -2,3 +2,22 @@
   padding: 64px 0;
   color: white;
 }
+
+.description{
+  padding: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.name{
+  padding: 32px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.stars{
+  display: flex;
+  justify-content: center;
+}

@@ -9,5 +9,9 @@ import close from './close.svg';
 import video from './video.svg';
 import aboutUs from './aboutUs.webp'
 import aboutUs_logo from './aboutUs_logo.svg'
+import SubtractFooter from './SubtractFooter.svg'; 
+import Instagram from './Instagram.svg';
+import Facebook from './Facebook.svg';
+import Youtube from './Youtube.svg';
 
-export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six, close, video, aboutUs, aboutUs_logo}
+export default {Subtract, people_one, people_two, people_three, people_four, people_five, people_six, close, video, aboutUs, aboutUs_logo, SubtractFooter, Instagram, Facebook, Youtube}

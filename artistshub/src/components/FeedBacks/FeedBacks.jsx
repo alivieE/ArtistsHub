@@ -49,10 +49,12 @@ const FeedBacks = () => {
                       height: "100%",
                     }}
                   >
-                    <StarRating
+                    <div className={s.stars}>
+                      <StarRating
                       value={feedback.rating}
                       isChange={false}
-                    ></StarRating>
+                      ></StarRating>
+                    </div>                    
                     <p className={s.description}>{feedback.descr}</p>
                     <p className={s.name}>{feedback.name}</p>
                   </div>

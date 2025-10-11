@@ -2,6 +2,7 @@ import "./App.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ArtistList from "./components/ArtistList/ArtistList";
 import FeedBacks from "./components/FeedBacks/FeedBacks";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 
@@ -19,6 +20,7 @@ function App() {
       <section id="reviews">
         <FeedBacks />
       </section>
+      <Footer></Footer>
     </>
   );
 }
