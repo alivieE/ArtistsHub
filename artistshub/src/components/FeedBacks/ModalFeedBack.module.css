@@ -1,0 +1,87 @@
+.overlay {
+  padding: 64px 16px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #303030ec;
+  color: white;
+  overflow: scroll;
+}
+
+.close{
+  position:             absolute;
+  top:25px;
+  right: 25px;
+  background-color: transparent;
+}
+
+
+.modal {
+  background-color: black;
+  border-radius: 16px;
+  padding: 8px;
+  position: relative;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 64px;
+}
+
+.input{
+  width: 95%;
+  height: 43px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  resize: none;
+  background-color: transparent;
+  color: white;
+}
+
+.textarea{
+  width: 95%;
+  height: 130px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  resize: none;
+  background-color: transparent;
+  color: white;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.inputBlock{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button{
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #7a4794;
+  cursor: progress;
+  border-radius: 12px;
+  width: 100%;
+  padding: 15px 24px;
+  gap: 12px;
+  margin: 32px 0 64px 0;
+  border-top: 2px solid #9973ad;
+  border-bottom: 2px solid #5f3575;
+}

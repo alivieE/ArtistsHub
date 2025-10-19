@@ -139,3 +139,8 @@ body:has(.burgerCheckbox:checked) {
     display: block;
   }
 }
+
+.links:hover,.menu_item:hover {
+  color: #764191;
+  cursor: pointer;
+}

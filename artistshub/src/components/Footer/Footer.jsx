@@ -3,6 +3,8 @@ import s from "./Footer.module.css";
 import images from "../../assets";
 
 const Footer = () => {
+
+
   return (
     <div className="container">
       <div className={s.footer}>
@@ -15,19 +17,19 @@ const Footer = () => {
           <nav>
             <ul className={s.bigMenuList}>
               <li>
-                <a href="#artists" className={s.link}>
+                <a href="#artists" className={s.links}>
                   {" "}
                   Artists
                 </a>
               </li>
               <li>
-                <a href="#about" className={s.link}>
+                <a href="#about" className={s.links}>
                   {" "}
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#reviews" className={s.link}>
+                <a href="#reviews" className={s.links}>
                   {" "}
                   Reviews
                 </a>

@@ -3,6 +3,7 @@ import s from "./FeedBacks.module.css";
 import StarRating from "./Rating.jsx";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ModalFeedBack from "./ModalFeedBack.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,6 +16,7 @@ import "swiper/css/scrollbar";
 
 const FeedBacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     fetch("https://sound-wave.b.goit.study/api/feedbacks?limit=5&page=1")
@@ -62,7 +64,11 @@ const FeedBacks = () => {
               );
             })}
         </Swiper>
+        <button className={s.button} type="button" onClick={() => {
+          setModalOpen(!modalOpen);
+        }}>Leave feedback</button>
       </div>
+      {modalOpen && <ModalFeedBack setModalOpen={setModalOpen} />}
     </div>
   );
 };

@@ -18,13 +18,13 @@ const Header = () => {
           <nav>
             <ul className={s.bigMenuList}>
               <li>
-                <a href="#artists"> Artists</a>
+                <a className={s.links} href="#artists"> Artists</a>
               </li>
               <li>
-                <a href="#about"> About Us</a>
+                <a className={s.links} href="#about"> About Us</a>
               </li>
               <li>
-                <a href="#reviews"> Reviews</a>
+                <a className={s.links} href="#reviews"> Reviews</a>
               </li>
             </ul>
           </nav>
