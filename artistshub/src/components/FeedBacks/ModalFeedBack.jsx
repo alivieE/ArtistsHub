@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import s from './ModalFeedBack.module.css';
 import images from '../../assets';
 import StarRating from './StarRating.jsx';
+import { Notify } from 'notiflix';
 
 const ModalFeedBack = ({ setModalOpen }) => {
   const [name, setName] = useState('');
@@ -16,8 +17,19 @@ const ModalFeedBack = ({ setModalOpen }) => {
   function handleMassege(e) {
     setMessage(e.target.value);
   }
-  function onSubmit(e) {
+
+  const validateForm = () => rating > 0 && (name || message);
+
+  const onSubmit = e => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      alert(
+        "Please fill in all required fields and ensure amount is greater than zero."
+      );
+      return;
+    }
+
     fetch('https://sound-wave.b.goit.study/api/feedbacks', {
       body: JSON.stringify({
         name,
@@ -25,12 +37,18 @@ const ModalFeedBack = ({ setModalOpen }) => {
         descr: message,
       }),
       headers: {
-        accept: ' application/json',
+        Accept: ' application/json',
         'Content-Type': 'application/json',
       },
       method: 'POST',
     });
-  }
+
+    setModalOpen(false);
+
+    Notify.success('Feedback sent', {
+      timeout: 3000,
+    });
+  };
   return (
     <>
       <div
@@ -55,6 +73,7 @@ const ModalFeedBack = ({ setModalOpen }) => {
             <div className={s.inputBlock}>
               <p>Name</p>
               <input
+                required
                 type="text"
                 className={s.input}
                 name="name"
@@ -65,13 +84,12 @@ const ModalFeedBack = ({ setModalOpen }) => {
             <div className={s.inputBlock}>
               <p>Message</p>
               <textarea
+                required
                 className={s.textarea}
                 name="message"
                 value={message}
                 onChange={handleMassege}
-              >
-                sdfsdf
-              </textarea>
+              ></textarea>
             </div>
             <StarRating //leave feedback modal
               rating={rating}

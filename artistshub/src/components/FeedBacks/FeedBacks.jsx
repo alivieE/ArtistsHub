@@ -16,9 +16,11 @@ import Rating from './Rating.jsx';
 const FeedBacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  console.log();
+  
 
   useEffect(() => {
-    fetch('https://sound-wave.b.goit.study/api/feedbacks?limit=5&page=1')
+    fetch('https://sound-wave.b.goit.study/api/feedbacks?limit=5&page=1000')
       .then(res => {
         return res.json();
       })
