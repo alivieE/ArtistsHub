@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import s from './ModalFeedBack.module.css';
 import images from '../../assets';
-// import RatingStars from "./RatingStars";
+import StarRating from './StarRating.jsx';
 
 const ModalFeedBack = ({ setModalOpen }) => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
 
   function handleName(e) {
     setName(e.target.value);
@@ -13,6 +15,9 @@ const ModalFeedBack = ({ setModalOpen }) => {
 
   function handleMassege(e) {
     setMessage(e.target.value);
+  }
+  function onSubmit(e) {
+    e.preventDefault();
   }
   return (
     <>
@@ -34,7 +39,7 @@ const ModalFeedBack = ({ setModalOpen }) => {
             <img src={images.close} />
           </button>
           <h2 className={s.title}>Submit feedback</h2>
-          <form className={s.form}>
+          <form className={s.form} onSubmit={onSubmit}>
             <div className={s.inputBlock}>
               <p>Name</p>
               <input
@@ -56,7 +61,12 @@ const ModalFeedBack = ({ setModalOpen }) => {
                 sdfsdf
               </textarea>
             </div>
-            {/* <div><RatingStars/></div> */}
+            <StarRating
+              rating={rating}
+              setRating={setRating}
+              hover={hover}
+              setHover={setHover}
+            />
             <button type="submit" className={s.button}>
               Submit
             </button>

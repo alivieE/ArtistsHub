@@ -1,11 +1,11 @@
-import React from "react";
-import s from "./Hero.module.css";
-import images from "../../assets";
-import heroImg from "../../assets/hero";
-import { useMediaQuery } from "react-responsive";
+import React from 'react';
+import s from './Hero.module.css';
+import images from '../../assets';
+import heroImg from '../../assets/hero';
+import { useMediaQuery } from 'react-responsive';
 const Hero = () => {
-  const isMobile = useMediaQuery({ query: "(max-width:768px)" });
-  const isDesktop = useMediaQuery({ query: "(min-width:1440px)" });
+  const isMobile = useMediaQuery({ query: '(max-width:768px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width:1440px)' });
   console.log(isDesktop);
   return (
     <div className={s.section}>
@@ -22,9 +22,11 @@ const Hero = () => {
             and learn about your favorite artists all in one place.
           </p>
           <button className={s.button} type="button">
-              <a href="#artists" className={s.buttonItem}> Explore Artists 
-                <img src={heroImg.icon} alt="icon" />
-              </a> 
+            <a href="#artists" className={s.buttonItem}>
+              {' '}
+              Explore Artists
+              <img src={heroImg.icon} alt="icon" />
+            </a>
           </button>
         </div>
         <div className={s.rightSide}>
