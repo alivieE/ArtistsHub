@@ -14,5 +14,5 @@
 
 .star.active,
 .star:hover {
-  color: gold;
+  color: rgba(118, 65, 145, 1);
 }

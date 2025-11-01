@@ -11,22 +11,21 @@
   overflow: scroll;
 }
 
-.close{
-  position:             absolute;
-  top:25px;
+.close {
+  position: absolute;
+  top: 25px;
   right: 25px;
   background-color: transparent;
 }
 
-
 .modal {
   background-color: black;
   border-radius: 16px;
-  padding: 8px;
+  padding: 16px;
   position: relative;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: center;
   font-weight: 700;
@@ -35,7 +34,7 @@
   margin-top: 64px;
 }
 
-.input{
+.input {
   width: 95%;
   height: 43px;
   border-radius: 8px;
@@ -46,7 +45,7 @@
   color: white;
 }
 
-.textarea{
+.textarea {
   width: 95%;
   height: 130px;
   border-radius: 8px;
@@ -57,21 +56,20 @@
   color: white;
 }
 
-
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.inputBlock{
+.inputBlock {
   display: flex;
   margin-top: 10px;
   flex-direction: column;
   gap: 8px;
 }
 
-.button{
+.button {
   justify-content: center;
   align-items: center;
   color: white;

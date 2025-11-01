@@ -73,7 +73,7 @@ const ModalFeedBack = ({ setModalOpen }) => {
                 sdfsdf
               </textarea>
             </div>
-            <StarRating
+            <StarRating //leave feedback modal
               rating={rating}
               setRating={setRating}
               hover={hover}

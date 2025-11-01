@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import s from './FeedBacks.module.css';
-// import StarRating from "./StarRating.jsx";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ModalFeedBack from './ModalFeedBack.jsx';
@@ -8,11 +7,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Rating from './Rating.jsx';
 
 const FeedBacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -31,7 +30,6 @@ const FeedBacks = () => {
     <div className={s.section}>
       <div className="container">
         <Swiper
-          // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
@@ -51,7 +49,9 @@ const FeedBacks = () => {
                       height: '100%',
                     }}
                   >
-                    <div className={s.stars}></div>
+                    <div className={s.stars}>
+                      <Rating value={feedback.rating} isChange={false}></Rating>
+                    </div>
                     <p className={s.description}>{feedback.descr}</p>
                     <p className={s.name}>{feedback.name}</p>
                   </div>

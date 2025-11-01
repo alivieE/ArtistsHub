@@ -3,26 +3,26 @@
   color: white;
 }
 
-.description{
+.description {
   padding: 16px;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
 }
 
-.name{
+.name {
   padding: 32px;
   text-align: center;
   font-weight: 600;
   font-size: 18px;
 }
 
-.stars{
+.stars {
   display: flex;
   justify-content: center;
 }
 
-.button{
+.button {
   justify-content: center;
   align-items: center;
   color: white;
