@@ -9,6 +9,7 @@ const ModalFeedBack = ({ setModalOpen }) => {
   const [message, setMessage] = useState('');
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  
 
   function handleName(e) {
     setName(e.target.value);

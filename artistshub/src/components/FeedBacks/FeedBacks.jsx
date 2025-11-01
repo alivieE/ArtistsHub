@@ -20,7 +20,7 @@ const FeedBacks = () => {
   
 
   useEffect(() => {
-    fetch('https://sound-wave.b.goit.study/api/feedbacks?limit=5&page=1000')
+    fetch('https://sound-wave.b.goit.study/api/feedbacks?limit=5&page=1')
       .then(res => {
         return res.json();
       })
