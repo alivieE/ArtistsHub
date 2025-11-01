@@ -18,7 +18,7 @@ function App() {
         <AboutUs />
       </section>
       <section id="reviews">
-        <FeedBacks />
+        {/* <FeedBacks /> */}
       </section>
       <Footer></Footer>
     </>

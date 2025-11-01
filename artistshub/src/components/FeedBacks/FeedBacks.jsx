@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./FeedBacks.module.css";
-import StarRating from "./Rating.jsx";
+// import StarRating from "./StarRating.jsx";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ModalFeedBack from "./ModalFeedBack.jsx";
