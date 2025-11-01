@@ -18,6 +18,18 @@ const ModalFeedBack = ({ setModalOpen }) => {
   }
   function onSubmit(e) {
     e.preventDefault();
+    fetch('https://sound-wave.b.goit.study/api/feedbacks', {
+      body: JSON.stringify({
+        name,
+        rating,
+        descr: message,
+      }),
+      headers: {
+        accept: ' application/json',
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
   }
   return (
     <>
